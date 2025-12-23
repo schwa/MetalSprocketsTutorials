@@ -6,7 +6,7 @@ Each folder contains a complete Xcode project you can build and run, or use as a
 
 ## Getting Started
 
-📖 **[Start the Tutorials](https://schwa.github.io/MetalSprockets/documentation/metalsprockets/01-colorfultriangle)**
+📖 **[Start the Tutorials](https://schwa.github.io/MetalSprockets/documentation/metalsprockets/tutorialoverview)**
 
 ## Requirements
 
