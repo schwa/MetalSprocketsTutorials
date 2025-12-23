@@ -1,10 +1,3 @@
-//
-//  MetalSprocketsTutorialApp.swift
-//  MetalSprocketsTutorial
-//
-//  Created by Jonathan Wight on 12/23/25.
-//
-
 import SwiftUI
 
 @main
