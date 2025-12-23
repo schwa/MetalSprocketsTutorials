@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		45AD43A02EFB38D800D40B30 /* MetalSprockets in Frameworks */ = {isa = PBXBuildFile; productRef = 45AD439F2EFB38D800D40B30 /* MetalSprockets */; };
+		45AD43A22EFB38D800D40B30 /* MetalSprocketsUI in Frameworks */ = {isa = PBXBuildFile; productRef = 45AD43A12EFB38D800D40B30 /* MetalSprocketsUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		45AD43902EFB38B800D40B30 /* MetalSprocketsTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalSprocketsTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AD43A02EFB38D800D40B30 /* MetalSprockets in Frameworks */,
+				45AD43A22EFB38D800D40B30 /* MetalSprocketsUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = MetalSprocketsTutorial;
 			packageProductDependencies = (
+				45AD439F2EFB38D800D40B30 /* MetalSprockets */,
+				45AD43A12EFB38D800D40B30 /* MetalSprocketsUI */,
 			);
 			productName = MetalSprocketsTutorial;
 			productReference = 45AD43902EFB38B800D40B30 /* MetalSprocketsTutorial.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = 45AD43872EFB38B800D40B30;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				45AD439E2EFB38D800D40B30 /* XCRemoteSwiftPackageReference "MetalSprockets" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 45AD43912EFB38B800D40B30 /* Products */;
 			projectDirPath = "";
@@ -351,6 +363,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45AD439E2EFB38D800D40B30 /* XCRemoteSwiftPackageReference "MetalSprockets" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/schwa/MetalSprockets";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45AD439F2EFB38D800D40B30 /* MetalSprockets */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45AD439E2EFB38D800D40B30 /* XCRemoteSwiftPackageReference "MetalSprockets" */;
+			productName = MetalSprockets;
+		};
+		45AD43A12EFB38D800D40B30 /* MetalSprocketsUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45AD439E2EFB38D800D40B30 /* XCRemoteSwiftPackageReference "MetalSprockets" */;
+			productName = MetalSprocketsUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45AD43882EFB38B800D40B30 /* Project object */;
 }
