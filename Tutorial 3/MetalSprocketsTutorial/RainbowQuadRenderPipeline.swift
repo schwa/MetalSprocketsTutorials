@@ -28,14 +28,9 @@ struct RainbowQuadRenderPipeline: Element {
                 fragmentShader: library.rainbowQuadFragmentShader
             ) {
                 Draw { encoder in
-                    var verts = vertices
-                    encoder.setVertexBytes(
-                        &verts,
-                        length: MemoryLayout<Vertex>.stride * vertices.count,
-                        index: 0
-                    )
-                    encoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 6)
+                    encoder.drawPrimitives(primitiveType: .triangle, vertexStart: 0, vertexCount: 6)
                 }
+                .vertexValues(vertices, index: 0)
                 .parameter("time", value: time)
             }
             .vertexDescriptor(Vertex.descriptor)

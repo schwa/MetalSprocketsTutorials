@@ -13,7 +13,7 @@ struct ContentView: View {
                     fragmentShader: library.colorfulTriangleFragmentShader
                 ) {
                     Draw { encoder in
-                        encoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)
+                        encoder.drawPrimitives(primitiveType: .triangle, vertexStart: 0, vertexCount: 3)
                     }
                 }
             }

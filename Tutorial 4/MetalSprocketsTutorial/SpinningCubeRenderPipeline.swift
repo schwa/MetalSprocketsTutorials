@@ -20,28 +20,16 @@ struct SpinningCubeRenderPipeline: Element {
 
     var body: some Element {
         get throws {
-            try RenderPipeline(
+            let vertices = generateCubeVertices()
+            return try RenderPipeline(
                 vertexShader: library.cubeVertexShader,
                 fragmentShader: library.cubeFragmentShader
             ) {
                 Draw { encoder in
-                    // Pass uniforms to vertex shader
-                    var uniforms = uniforms
-                    encoder.setVertexBytes(
-                        &uniforms,
-                        length: MemoryLayout<Uniforms>.stride,
-                        index: 1
-                    )
-
-                    // Generate and pass cube vertices
-                    var vertices = generateCubeVertices()
-                    encoder.setVertexBytes(
-                        &vertices,
-                        length: MemoryLayout<Vertex>.stride * vertices.count,
-                        index: 0
-                    )
-                    encoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertices.count)
+                    encoder.drawPrimitives(primitiveType: .triangle, vertexStart: 0, vertexCount: vertices.count)
                 }
+                .vertexValues(vertices, index: 0)
+                .vertexValues([uniforms], index: 1)
             }
             .vertexDescriptor(Vertex.descriptor)
             // Enable depth testing so back faces don't render over front faces
